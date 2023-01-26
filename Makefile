@@ -6,6 +6,7 @@ AR = ar -crs
 OBJS = $(FILES:.c=.o)
 FILES = ft_printf.c
 
+
 all : $(NAME)
 
 $(NAME) : $(OBJS)
@@ -13,6 +14,8 @@ $(NAME) : $(OBJS)
 	@cp libft/libft.a .
 	@mv libft.a $(NAME)
 	@$(AR) $(NAME) $(OBJS)
+%.o : %.c
+	$(CC) $(CFLAGS) -Iinclude -c $< -o $@
 clean :
 	@make -C libft fclean
 	@$(RM) $(OBJS)
