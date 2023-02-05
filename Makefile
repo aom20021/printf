@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 AR = ar -crs
 OBJS = $(FILES:.c=.o)
-FILES = ft_printf.c
+FILES = ft_printf.c ft_unsigned.c ft_hex.c
 
 
 all : $(NAME)
